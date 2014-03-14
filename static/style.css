@@ -1,0 +1,26 @@
+body {
+    background-color: #e1f5ff;
+}
+div {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-color: #2eff20;
+    display: inline-block;
+}
+
+.white {
+    background-color: #FFFFFF;
+}
+
+.black {
+    background-color: #000000;
+}
+
+.board {
+    background-color: green;
+}
+
+.board td {
+    padding: 3px;
+}
