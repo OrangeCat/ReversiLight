@@ -143,10 +143,10 @@ var undoLastMove = function() {
     currentGame[y][x]='-';
     $('#'+y+'_'+x).removeClass('black').removeClass('white');
 
-    revers='b';
+    revers='w';
     reversClass='black';
     opponentClass='white';
-    if (nowMove==='b') {revers='w'; opponentClass='white';}
+    if (nowMove==='w') {revers='b'; reversClass='white'; opponentClass='black';}
 
     for(lm in lastMove[1]) {
         x = lastMove[1][lm][1];
@@ -202,6 +202,7 @@ var onClick = function(id) {
                 if(!canMove('b')){
                     showInfo();
                     gameOver();
+                    return;
                 }
             }
         }
@@ -213,6 +214,7 @@ var onClick = function(id) {
                 if(!canMove('w')){
                     showInfo();
                     gameOver();
+                    return;
                 }
             }
         }
